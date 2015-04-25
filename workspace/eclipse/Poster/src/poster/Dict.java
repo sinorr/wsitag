@@ -56,8 +56,8 @@ public class Dict{
 			while (line != null){
 				int flag = line.indexOf(' ');
 				if (flag != -1){
-					line = line.substring(0, flag);
-					if (line.indexOf('_') == -1 && line.indexOf('-') == -1 && !stops.contains(line) && !line.matches(".*\\d+.*")){          // Keep words whit high frequency;
+					line = line.substring(0, flag).trim();
+					if (line.indexOf('_') == -1 && line.indexOf('-') == -1 && !stops.contains(line) && !line.matches(".*\\d+.*") && line.length() > 0){          // Keep words whit high frequency;
 						lemmaCount.put(line, 0);
 						//System.out.println(line);   // Debug;
 					}

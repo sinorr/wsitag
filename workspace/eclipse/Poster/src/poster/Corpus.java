@@ -119,7 +119,7 @@ public class Corpus{
 			if (temp != null){
 				if (!wordVec.contains(temp))
 					wordVec.add(temp);
-				withOrderLine += words[i] + "|||" + temp.getValue();
+				withOrderLine += words[i] + "|||" + (temp.getValue() + 1);
 			}else{
 				withOrderLine += words[i];
 			}
